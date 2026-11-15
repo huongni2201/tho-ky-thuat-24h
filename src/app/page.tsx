@@ -9,7 +9,6 @@ import ServiceAreas from "@/components/sections/ServiceAreas";
 import FaqSection from "@/components/sections/FaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import Footer from "@/components/layout/Footer";
-import MobileStickyBar from "@/components/ui/MobileStickyBar";
 
 export default function Home() {
   return (
@@ -49,9 +48,6 @@ export default function Home() {
 
       {/* Comprehensive Footer */}
       <Footer />
-
-      {/* Mobile Fixed Sticky Quick Action Bar */}
-      <MobileStickyBar />
     </div>
   );
 }

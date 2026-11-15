@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SERVICES, SITE_CONFIG } from "@/data/siteData";
 
@@ -17,40 +18,49 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 sm:mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-8 sm:mt-10">
           {SERVICES.map((service) => (
             <article
               key={service.id}
-              className="bg-white rounded-xl border border-slate-200/90 p-6 flex flex-col justify-between hover:border-sky-300 transition-colors group shadow-sm"
+              className="overflow-hidden bg-white rounded-xl border border-slate-200/90 flex flex-col hover:border-sky-300 focus-within:border-sky-300 transition-colors group shadow-sm"
             >
-              <div className="space-y-4">
+              <Image
+                src={service.image}
+                alt={service.imageAlt}
+                width={960}
+                height={540}
+                className="block w-full h-auto bg-slate-100"
+              />
+              <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6 lg:p-7">
                 {/* Header Title & Badge */}
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-900 transition-colors">
-                    <Link href={`/${service.slug}`} className="hover:underline">
-                      {service.title}
-                    </Link>
+                <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
+                  <h3 className="text-xl lg:text-2xl font-bold text-slate-900 group-hover:text-sky-900 transition-colors">
+                    {service.slug ? (
+                      <Link href={`/${service.slug}`} className="hover:underline">
+                        {service.title}
+                      </Link>
+                    ) : service.title}
                   </h3>
 
                   {service.badge ? (
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
                       {service.badge}
                     </span>
                   ) : null}
                 </div>
 
                 {/* Service Description */}
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 text-base leading-relaxed">
                   {service.shortDesc}
                 </p>
 
                 {/* Popular items bullet list */}
                 <div className="pt-3 border-t border-slate-100 space-y-2">
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">Hạng mục chính:</span>
-                  <ul className="space-y-1.5 text-xs text-slate-600">
-                    {service.popularItems.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <svg className="w-3.5 h-3.5 text-sky-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Hạng mục chính:</span>
+                  <ul className="space-y-1.5 text-sm text-slate-600">
+                    {service.popularItems.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <svg aria-hidden="true" className="w-3.5 h-3.5 text-sky-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                         <span>{item}</span>
@@ -58,20 +68,19 @@ export default function ServicesSection() {
                     ))}
                   </ul>
                 </div>
-              </div>
-
-              {/* Card Footer CTA */}
-              <div className="pt-4 mt-4 flex items-center justify-between border-t border-slate-100 text-xs">
-                <span className="text-slate-500 font-medium">Báo giá chốt trước</span>
-                <Link
-                  href={`/${service.slug}`}
-                  className="inline-flex items-center gap-1 font-bold text-sky-800 hover:text-sky-900 group-hover:translate-x-0.5 transition-transform"
-                >
-                  <span>Chi tiết & đặt thợ</span>
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                {/* Card Footer CTA */}
+                <div className="mt-auto flex flex-wrap items-center justify-between gap-x-3 border-t border-slate-100 text-sm">
+                  <span className="text-slate-500 font-medium">Báo giá chốt trước</span>
+                  <a
+                    href={`tel:${SITE_CONFIG.phoneRaw}`}
+                    className="inline-flex min-h-11 items-center gap-1 font-bold text-sky-800 hover:underline"
+                  >
+                    <span>Gọi thợ</span>
+                    <svg aria-hidden="true" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </article>
           ))}

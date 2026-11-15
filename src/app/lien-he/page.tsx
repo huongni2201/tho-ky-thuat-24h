@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import MobileStickyBar from "@/components/ui/MobileStickyBar";
 import ContactInfo from "@/components/contact/ContactInfo";
 import ContactActions from "@/components/contact/ContactActions";
 import ServiceAreaCompact from "@/components/contact/ServiceAreaCompact";
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Liên hệ | ${SITE_CONFIG.name}`,
     description:
-      "Thông tin hotline 0984.967.618, nhắn Zalo tư vấn, giờ làm việc và danh sách cơ sở của Thợ Kỹ Thuật 24h tại Hà Nội.",
+      `Thông tin hotline ${SITE_CONFIG.phoneDisplay}, nhắn Zalo tư vấn, giờ làm việc và danh sách cơ sở của Thợ Kỹ Thuật 24h tại Hà Nội.`,
     url: `${SITE_CONFIG.baseUrl}/lien-he`,
     siteName: SITE_CONFIG.name,
     locale: "vi_VN",
@@ -83,9 +82,6 @@ export default function ContactPage() {
 
       {/* Global Footer */}
       <Footer />
-
-      {/* Mobile Fixed Quick Action Bar */}
-      <MobileStickyBar />
     </div>
   );
 }

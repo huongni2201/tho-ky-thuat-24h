@@ -89,7 +89,7 @@ export default function Footer() {
       </div>
 
       {/* Sub Footer Copyright Bar */}
-      <div className="bg-slate-900/80 border-t border-slate-800/80 py-4 text-xs text-slate-400">
+      <div className="bg-slate-900/80 border-t border-slate-800/80 pt-4 pb-[calc(9rem+env(safe-area-inset-bottom))] text-xs text-slate-400 sm:pb-[calc(10rem+env(safe-area-inset-bottom))]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p>© 2026 {SITE_CONFIG.legalName}. Bản quyền thuộc về Thokythuat24h.com.</p>
           <div className="flex items-center gap-4 text-slate-400">

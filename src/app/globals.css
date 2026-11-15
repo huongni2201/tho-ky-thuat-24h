@@ -32,3 +32,25 @@ body {
   outline: 2px solid #0f4c81;
   outline-offset: 2px;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .quick-contact-bubble::after {
+    animation: quick-contact-ripple 2.2s ease-out 2;
+  }
+
+  .quick-contact-bubble + .quick-contact-bubble::after {
+    animation-delay: 350ms;
+  }
+}
+
+@keyframes quick-contact-ripple {
+  from {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  60%, to {
+    opacity: 0;
+    transform: scale(1.36);
+  }
+}

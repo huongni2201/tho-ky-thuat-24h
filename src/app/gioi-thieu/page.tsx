@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import MobileStickyBar from "@/components/ui/MobileStickyBar";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import { SITE_CONFIG } from "@/data/siteData";
@@ -89,7 +88,6 @@ export default function AboutPage() {
       </main>
 
       <Footer />
-      <MobileStickyBar />
     </div>
   );
 }

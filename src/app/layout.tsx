@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/seo/JsonLd";
+import QuickContact from "@/components/ui/QuickContact";
 import { SITE_CONFIG } from "@/data/siteData";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -63,9 +64,10 @@ export default function RootLayout({
       lang="vi"
       className={`${beVietnamPro.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans selection:bg-sky-500 selection:text-white pb-16 lg:pb-0">
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans selection:bg-sky-500 selection:text-white">
         <JsonLd />
         {children}
+        <QuickContact />
       </body>
     </html>
   );

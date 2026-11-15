@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import MobileStickyBar from "@/components/ui/MobileStickyBar";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import FaqSection from "@/components/sections/FaqSection";
 import { SITE_CONFIG } from "@/data/siteData";
@@ -81,7 +80,6 @@ export default function TvMountingPage() {
       </main>
 
       <Footer />
-      <MobileStickyBar />
     </div>
   );
 }

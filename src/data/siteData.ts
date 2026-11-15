@@ -1,11 +1,14 @@
 import { ServiceItem, ProjectItem, FaqItem, DistrictCoverage, TrustPoint, ProcessStep } from "@/types";
 
+const phoneDisplay = "056.272.8888";
+const phoneRaw = phoneDisplay.replace(/\D/g, "");
+
 export const SITE_CONFIG = {
   name: "Thợ Kỹ Thuật 24h",
   legalName: "Dịch Vụ Kỹ Thuật Tại Nhà Hà Nội - Thợ Kỹ Thuật 24h",
-  phoneDisplay: "0984.967.618",
-  phoneRaw: "0984967618",
-  zaloUrl: "https://zalo.me/0984967618",
+  phoneDisplay,
+  phoneRaw,
+  zaloUrl: `https://zalo.me/${phoneRaw}`,
   domain: "thokythuat24h.com",
   baseUrl: "https://thokythuat24h.com",
   primaryAddress: "Tầng 2, D12 Giảng Võ, Ba Đình, Hà Nội",
@@ -25,6 +28,8 @@ export const SERVICES: ServiceItem[] = [
     id: "khoan-tuong-treo-tranh",
     title: "Khoan Tường Treo Tranh",
     slug: "khoan-tuong-treo-tranh",
+    image: "/images/service-art.webp",
+    imageAlt: "Bộ tranh trang trí treo trên tường phòng khách",
     shortDesc: "Khoan định vị chuẩn xác, treo bộ tranh nghệ thuật, tranh canvas, tranh kính, đồng hồ treo tường phẳng đẹp.",
     description: "Dịch vụ khoan tường treo tranh chuyên nghiệp tại Hà Nội. Thợ có máy cân bằng laser định vị chính xác từng milimet, không làm nứt tường hay hỏng bề mặt sơn.",
     iconName: "Frame",
@@ -39,7 +44,9 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "treo-tivi-tuong",
     title: "Khoan Treo Tivi Tường",
-    slug: "treo-tivi-tuong",
+    slug: "treo-tv-tuong",
+    image: "/images/service-tv.webp",
+    imageAlt: "Tivi màn hình phẳng treo trên vách ốp gỗ",
     shortDesc: "Lắp đặt khung treo TV thẳng, nghiêng, xoay đa năng cho màn hình từ 32 inch đến 85 inch chắc chắn, thẩm mỹ.",
     description: "Thợ thi công khoan treo Tivi lên tường gạch, tường bê tông, tường ốp gỗ hoặc tường thạch cao có gia cố. Đi dây gọn gàng, đảm bảo an toàn tuyệt đối.",
     iconName: "Tv",
@@ -55,6 +62,8 @@ export const SERVICES: ServiceItem[] = [
     id: "lap-gia-ke",
     title: "Lắp Giá Kệ & Ban Thờ",
     slug: "lap-gia-ke",
+    image: "/images/service-shelf.webp",
+    imageAlt: "Kệ gỗ treo tường để sách và đồ trang trí",
     shortDesc: "Lắp đặt kệ sách, kệ gỗ âm tường, kệ gia vị bếp, kệ nhà tắm, giá treo đồ và ban thờ treo tường vững chắc.",
     description: "Sử dụng tắc kê kim loại hoặc tắc kê nhựa chịu lực phù hợp cho từng chất liệu tường. Cam kết giá kệ chịu tải tốt, không cong vênh lệch góc.",
     iconName: "LayoutGrid",
@@ -69,7 +78,9 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "treo-guong-soi",
     title: "Treo Gương Trang Trí & Đèn",
-    slug: "treo-guong-soi",
+    slug: "treo-guong",
+    image: "/images/service-mirror.webp",
+    imageAlt: "Gương tròn có đèn LED treo trên tường phòng tắm",
     shortDesc: "Lắp gương soi toàn thân, gương nhà tắm, gương LED thông minh an toàn, không nứt vỡ.",
     description: "Gương treo tường đòi hỏi độ chính xác cao và tắc kê chuyên dụng. Thợ dùng máy laser thủy cân bằng, khoan êm không bị mẻ gạch ốp nát.",
     iconName: "Maximize2",
@@ -83,7 +94,9 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "treo-rem-cua",
     title: "Treo Rèm Cửa & Giàn Phơi",
-    slug: "treo-rem-cua",
+    slug: "lap-rem-cua",
+    image: "/images/service-curtains.webp",
+    imageAlt: "Thanh treo rèm vải phía trên cửa sổ phòng khách",
     shortDesc: "Khoan bắt thanh treo rèm vải, rèm cuốn, rèm cầu vồng, lắp giàn phơi đồ thông minh tại chung cư, nhà phố.",
     description: "Lắp đặt rèm cửa đúng độ cao, căng phẳng thẩm mỹ. Nhận sửa chữa thanh treo rèm bị xô lệch, sụt tắc kê do dùng lâu năm.",
     iconName: "Sliders",
@@ -97,7 +110,8 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "khoan-lap-thiet-bi",
     title: "Khoan Lắp Thiết Bị Gia Đình",
-    slug: "khoan-lap-thiet-bi",
+    image: "/images/service-fan.webp",
+    imageAlt: "Quạt điện gắn trên tường bằng giá đỡ",
     shortDesc: "Khoan bắt bảng hiệu, bảng lịch công tác, máy sấy tay, hộp giấy, quạt treo tường và đồ trang trí.",
     description: "Tổng hợp các việc khoan vặt tại nhà. Thợ mang đầy đủ dụng cụ: máy khoan bê tông, máy khoan pin, thước nivo, các loại tắc kê & vít.",
     iconName: "Wrench",
@@ -147,7 +161,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: "01",
     title: "Liên Hệ Khách Hàng",
-    description: "Quý khách gọi Hotline 0984.967.618 hoặc nhắn qua Zalo báo khối lượng công việc và địa chỉ tại Hà Nội."
+    description: `Quý khách gọi Hotline ${SITE_CONFIG.phoneDisplay} hoặc nhắn qua Zalo báo khối lượng công việc và địa chỉ tại Hà Nội.`
   },
   {
     step: "02",
