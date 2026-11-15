@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/data/siteData";
+import TechnicianIcon from "@/components/ui/TechnicianIcon";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,9 +73,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-900 to-slate-900 flex items-center justify-center text-amber-400 font-black text-xl shadow-md border border-sky-800 group-hover:scale-105 transition-transform">
-              <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2h-3a2 2 0 01-2-2V5a2 2 0 012-2h1zM4 13a2 2 0 012-2h12a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6z" />
-              </svg>
+              <TechnicianIcon />
             </div>
             <div className="flex flex-col">
               <span className="font-black text-lg sm:text-xl text-slate-900 tracking-tight leading-tight group-hover:text-sky-900 transition-colors flex items-center gap-1.5">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE_CONFIG, SERVICES, DISTRICTS } from "@/data/siteData";
+import TechnicianIcon from "@/components/ui/TechnicianIcon";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-sky-900 flex items-center justify-center text-amber-400 font-black text-xl shadow-inner">
-                TK
+                <TechnicianIcon />
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-xl text-white tracking-tight">

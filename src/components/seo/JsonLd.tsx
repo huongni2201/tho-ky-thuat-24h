@@ -1,4 +1,4 @@
-import { SITE_CONFIG, SERVICES, FAQS } from "@/data/siteData";
+import { SITE_CONFIG, SERVICES } from "@/data/siteData";
 
 export default function JsonLd() {
   const localBusinessSchema = {
@@ -9,19 +9,12 @@ export default function JsonLd() {
     "@id": SITE_CONFIG.baseUrl,
     "url": SITE_CONFIG.baseUrl,
     "telephone": SITE_CONFIG.phoneRaw,
-    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Tầng 2, D12 Giảng Võ",
       "addressLocality": "Ba Đình",
       "addressRegion": "Hà Nội",
-      "postalCode": "100000",
       "addressCountry": "VN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 21.028511,
-      "longitude": 105.823908
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -67,28 +60,11 @@ export default function JsonLd() {
     }
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": FAQS.map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </>
   );

@@ -24,17 +24,22 @@ export default function ServicesSection() {
               key={service.id}
               className="overflow-hidden bg-white rounded-xl border border-slate-200/90 flex flex-col hover:border-sky-300 focus-within:border-sky-300 transition-colors group shadow-sm"
             >
-              <Image
-                src={service.image}
-                alt={service.imageAlt}
-                width={960}
-                height={540}
-                className="block w-full h-auto bg-slate-100"
-              />
+              <div className="relative">
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  width={960}
+                  height={540}
+                  className="block w-full h-auto bg-slate-100"
+                />
+                <span aria-hidden="true" className="pointer-events-none absolute right-3 bottom-3 rounded bg-slate-950/35 px-2 py-1 text-sm font-semibold tracking-wide text-white/80 sm:text-base">
+                  {SITE_CONFIG.phoneDisplay}
+                </span>
+              </div>
               <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6 lg:p-7">
                 {/* Header Title & Badge */}
                 <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-2">
-                  <h3 className="text-xl lg:text-2xl font-bold text-slate-900 group-hover:text-sky-900 transition-colors">
+                  <h3 className="text-xl lg:text-2xl font-bold text-red-700 group-hover:text-red-800 transition-colors">
                     {service.slug ? (
                       <Link href={`/${service.slug}`} className="hover:underline">
                         {service.title}

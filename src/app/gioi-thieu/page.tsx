@@ -7,7 +7,7 @@ import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Giới Thiệu | ${SITE_CONFIG.name}`,
+  title: `Giới Thiệu`,
   description:
     "Tìm hiểu về Thợ Kỹ Thuật 24h - Đơn vị chuyên dịch vụ thợ khoan tường, treo tranh, treo Tivi, lắp giá kệ tận nhà uy tín tại Hà Nội.",
   alternates: {

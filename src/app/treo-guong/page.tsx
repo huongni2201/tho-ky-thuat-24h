@@ -7,7 +7,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Treo Gương Soi & Gương LED Tại Hà Nội | ${SITE_CONFIG.name}`,
+  title: `Treo Gương Soi & Gương LED Tại Hà Nội`,
   description:
     "Dịch vụ thợ treo gương soi toàn thân, gương nhà tắm ốp gạch men, gương LED thông minh an toàn tại Hà Nội.",
   alternates: {

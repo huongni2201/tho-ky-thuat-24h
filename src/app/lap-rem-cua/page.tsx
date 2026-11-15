@@ -7,7 +7,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Lắp Rèm Cửa & Giàn Phơi Tại Hà Nội | ${SITE_CONFIG.name}`,
+  title: `Lắp Rèm Cửa & Giàn Phơi Tại Hà Nội`,
   description:
     "Dịch vụ thợ khoan lắp rèm vải, rèm cuốn, rèm cầu vồng, giàn phơi thông minh ban công tại Hà Nội.",
   alternates: {

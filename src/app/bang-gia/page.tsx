@@ -7,7 +7,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Bảng Giá Dịch Vụ Khoan Tường & Lắp Đặt | ${SITE_CONFIG.name}`,
+  title: `Bảng Giá Dịch Vụ Khoan Tường & Lắp Đặt`,
   description:
     "Bảng giá dịch vụ khoan tường treo tranh, treo Tivi, lắp giá kệ, treo rèm minh bạch tại Hà Nội. Thợ báo giá trước khi làm, không phát sinh.",
   alternates: {
@@ -20,7 +20,7 @@ export default function PricingPage() {
     {
       service: "Khoan treo tranh / Bộ tranh decor",
       unit: "Bộ (1-3 bức)",
-      price: "150.000 - 250.000 đ",
+      price: "200.000 - 250.000 đ",
       note: "Bao gồm tắc kê & vít chuyên dụng",
     },
     {
@@ -38,7 +38,7 @@ export default function PricingPage() {
     {
       service: "Lắp giá kệ gỗ / Kệ sách trang trí",
       unit: "Bộ",
-      price: "150.000 - 300.000 đ",
+      price: "200.000 - 3.000.000 đ",
       note: "Tùy kích thước & chất liệu tường",
     },
     {
@@ -52,12 +52,6 @@ export default function PricingPage() {
       unit: "Bộ",
       price: "200.000 - 350.000 đ",
       note: "Thanh treo rèm vải hoặc rèm cuốn",
-    },
-    {
-      service: "Khoan vặt theo tổng số lỗ",
-      unit: "Gói công",
-      price: "Từ 150.000 đ",
-      note: "Áp dụng khi khoan lẻ 3-5 lỗ treo móc, đồng hồ",
     },
   ];
 

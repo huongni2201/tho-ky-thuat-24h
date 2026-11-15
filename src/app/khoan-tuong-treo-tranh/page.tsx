@@ -7,7 +7,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Khoan Tường Treo Tranh Tại Hà Nội | ${SITE_CONFIG.name}`,
+  title: `Khoan Tường Treo Tranh Tại Hà Nội`,
   description:
     "Dịch vụ thợ khoan tường treo tranh bộ, tranh kính, đồng hồ decor tận nhà tại Hà Nội. Đo nivo laser phẳng đẹp, báo giá trước, thi công dọn bụi.",
   alternates: {
