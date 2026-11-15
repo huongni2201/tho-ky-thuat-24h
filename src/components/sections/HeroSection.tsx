@@ -22,8 +22,9 @@ export default function HeroSection() {
             </div>
 
             {/* Main H1 SEO Title */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.2]">
-              Khoan Tường – Treo Tranh – Treo TV <span className="text-amber-300">Chuyên Nghiệp Tại Hà Nội</span>
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.2]">
+              Thợ Khoan Tường
+              <span className="mt-5 block text-amber-300 lg:text-5xl">Chuyên Nghiệp Tại Hà Nội</span>
             </h1>
 
             {/* Supporting Paragraph */}
@@ -41,16 +42,6 @@ export default function HeroSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1.01 1.01 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <span>GỌI THỢ NGAY: {SITE_CONFIG.phoneDisplay}</span>
-              </a>
-
-              <a
-                href="#dich-vu"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300/35 bg-white/10 px-5 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
-              >
-                <span>Xem dịch vụ & bảng giá</span>
-                <svg aria-hidden="true" className="size-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
               </a>
             </div>
 

@@ -14,7 +14,7 @@ const beVietnamPro = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   title: {
-    default: "Khoan Tường Treo Tranh - Treo Tivi Tại Hà Nội | Thợ Kỹ Thuật 24h",
+    default: "Thợ Khoan Tường Treo Tranh - Treo Tivi Tại Hà Nội | Thợ Kỹ Thuật 24h",
     template: "%s | Thợ Kỹ Thuật 24h",
   },
   description:
