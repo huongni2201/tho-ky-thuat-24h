@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Giới Thiệu`,
+  title: "Giới Thiệu",
   description:
     "Tìm hiểu về Thợ Kỹ Thuật 24h - Đơn vị chuyên dịch vụ thợ khoan tường, treo tranh, treo Tivi, lắp giá kệ tận nhà uy tín tại Hà Nội.",
   alternates: {

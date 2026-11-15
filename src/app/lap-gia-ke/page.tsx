@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import FaqSection from "@/components/sections/FaqSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Lắp Giá Kệ & Ban Thờ Tại Hà Nội`,
+  title: "Lắp Giá Kệ & Ban Thờ Tại Hà Nội",
   description:
     "Dịch vụ thợ lắp kệ sách, kệ gỗ âm tường, kệ gia vị inox bếp, kệ nhà tắm và ban thờ treo tường kiên cố tại Hà Nội.",
   alternates: {

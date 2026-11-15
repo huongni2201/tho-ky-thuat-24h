@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Khu Vực Phục Vụ Tại Hà Nội`,
+  title: "Khu Vực Phục Vụ Tại Hà Nội",
   description:
     "Danh sách các quận nội thành và khu vực thợ túc trực phục vụ khoan tường, treo TV, treo tranh tận nhà nhanh sau 20-30 phút tại Hà Nội.",
   alternates: {

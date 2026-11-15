@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import FaqSection from "@/components/sections/FaqSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Treo Gương Soi & Gương LED Tại Hà Nội`,
+  title: "Treo Gương Soi & Gương LED Tại Hà Nội",
   description:
     "Dịch vụ thợ treo gương soi toàn thân, gương nhà tắm ốp gạch men, gương LED thông minh an toàn tại Hà Nội.",
   alternates: {

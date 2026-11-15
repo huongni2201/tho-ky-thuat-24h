@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import FaqSection from "@/components/sections/FaqSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Khoan Treo Tivi Tường Tại Hà Nội`,
+  title: "Khoan Treo Tivi Tường Tại Hà Nội",
   description:
     "Dịch vụ thợ khoan treo Tivi từ 32 inch đến 85 inch lên tường gạch, bê tông, thạch cao tại Hà Nội. Khung treo thẳng, nghiêng, xoay đa năng chắc chắn.",
   alternates: {

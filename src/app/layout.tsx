@@ -32,10 +32,6 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Khoan Tường Treo Tranh - Treo Tivi Tại Hà Nội | Thợ Kỹ Thuật 24h",
-    description:
-      "Dịch vụ thợ khoan tường, treo tranh nghệ thuật, treo Tivi màn hình phẳng, lắp giá kệ tại nhà ở Hà Nội. Phục vụ nhanh 12 quận, báo giá minh bạch.",
-    url: SITE_CONFIG.baseUrl,
     siteName: SITE_CONFIG.name,
     locale: "vi_VN",
     type: "website",

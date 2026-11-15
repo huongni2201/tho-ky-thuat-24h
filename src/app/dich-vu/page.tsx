@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ServicesSection from "@/components/sections/ServicesSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Dịch Vụ Khoan Lắp Kỹ Thuật`,
+  title: "Dịch Vụ Khoan Lắp Kỹ Thuật",
   description:
     "Tổng quan danh mục dịch vụ thợ khoan tường treo tranh, treo Tivi, lắp giá kệ, treo rèm cửa, treo gương soi chuyên nghiệp tại Hà Nội.",
   alternates: {

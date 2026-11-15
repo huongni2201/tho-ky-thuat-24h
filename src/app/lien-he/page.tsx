@@ -10,14 +10,14 @@ import ContactMap from "@/components/contact/ContactMap";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Liên hệ`,
+  title: "Liên hệ",
   description:
     "Thông tin hotline, Zalo, giờ làm việc, khu vực phục vụ và danh sách cơ sở địa chỉ của Thợ Kỹ Thuật 24h tại Hà Nội.",
   alternates: {
     canonical: "/lien-he",
   },
   openGraph: {
-    title: `Liên hệ`,
+    title: "Liên hệ",
     description:
       `Thông tin hotline ${SITE_CONFIG.phoneDisplay}, nhắn Zalo tư vấn, giờ làm việc và danh sách cơ sở của Thợ Kỹ Thuật 24h tại Hà Nội.`,
     url: `${SITE_CONFIG.baseUrl}/lien-he`,

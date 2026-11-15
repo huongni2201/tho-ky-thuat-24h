@@ -7,7 +7,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Bảng Giá Dịch Vụ Khoan Tường & Lắp Đặt`,
+  title: "Bảng Giá Dịch Vụ Khoan Tường & Lắp Đặt",
   description:
     "Bảng giá dịch vụ khoan tường treo tranh, treo Tivi, lắp giá kệ, treo rèm minh bạch tại Hà Nội. Thợ báo giá trước khi làm, không phát sinh.",
   alternates: {

@@ -4,10 +4,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import FaqSection from "@/components/sections/FaqSection";
-import { SITE_CONFIG } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: `Khoan Tường Treo Tranh Tại Hà Nội`,
+  title: "Khoan Tường Treo Tranh Tại Hà Nội",
   description:
     "Dịch vụ thợ khoan tường treo tranh bộ, tranh kính, đồng hồ decor tận nhà tại Hà Nội. Đo nivo laser phẳng đẹp, báo giá trước, thi công dọn bụi.",
   alternates: {
