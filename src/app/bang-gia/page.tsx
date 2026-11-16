@@ -21,37 +21,31 @@ export default function PricingPage() {
       service: "Khoan treo tranh / Bộ tranh decor",
       unit: "Bộ (1-3 bức)",
       price: "200.000 - 250.000 đ",
-      note: "Bao gồm tắc kê & vít chuyên dụng",
     },
     {
       service: "Khoan treo Tivi (32 - 55 inch)",
       unit: "Chiếc",
       price: "200.000 - 300.000 đ",
-      note: "Đã có sẵn giá treo hoặc thợ mang giá mới",
     },
     {
       service: "Khoan treo Tivi màn lớn (65 - 85 inch)",
       unit: "Chiếc",
       price: "300.000 - 450.000 đ",
-      note: "Yêu cầu 2 thợ bê đỡ & gia cố tắc kê sắt",
     },
     {
       service: "Lắp giá kệ gỗ / Kệ sách trang trí",
       unit: "Bộ",
       price: "200.000 - 3.000.000 đ",
-      note: "Tùy kích thước & chất liệu tường",
     },
     {
       service: "Khoan lắp ban thờ treo tường",
       unit: "Chiếc",
       price: "250.000 - 400.000 đ",
-      note: "Đo nivo laser cân bằng chuẩn phong thủy",
     },
     {
       service: "Lắp rèm cửa / Giàn phơi thông minh",
       unit: "Bộ",
       price: "200.000 - 350.000 đ",
-      note: "Thanh treo rèm vải hoặc rèm cuốn",
     },
   ];
 
@@ -99,7 +93,6 @@ export default function PricingPage() {
                     <th className="p-3.5 sm:p-4">Hạng mục công việc</th>
                     <th className="p-3.5 sm:p-4">Đơn vị</th>
                     <th className="p-3.5 sm:p-4">Mức giá tham khảo</th>
-                    <th className="p-3.5 sm:p-4 hidden md:table-cell">Ghi chú kỹ thuật</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200 text-slate-800">
@@ -108,7 +101,6 @@ export default function PricingPage() {
                       <td className="p-3.5 sm:p-4 font-semibold text-slate-900">{item.service}</td>
                       <td className="p-3.5 sm:p-4 text-slate-600">{item.unit}</td>
                       <td className="p-3.5 sm:p-4 font-bold text-amber-600">{item.price}</td>
-                      <td className="p-3.5 sm:p-4 text-slate-500 hidden md:table-cell">{item.note}</td>
                     </tr>
                   ))}
                 </tbody>

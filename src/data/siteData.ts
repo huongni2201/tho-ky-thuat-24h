@@ -43,7 +43,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "treo-tivi-tuong",
-    title: "Khoan Treo Tivi Tường",
+    title: "Khoan Lắp Tivi Treo Tường",
     slug: "treo-tv-tuong",
     image: "/images/service-tv-installation.webp",
     imageAlt: "Hai thợ kỹ thuật đang lắp tivi màn hình phẳng lên giá treo tường",
@@ -60,7 +60,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "lap-gia-ke",
-    title: "Lắp Giá Kệ & Ban Thờ",
+    title: "Khoan lắp giá kệ & ban thờ",
     slug: "lap-gia-ke",
     image: "/images/service-shelf.webp",
     imageAlt: "Kệ gỗ treo tường để sách và đồ trang trí",
