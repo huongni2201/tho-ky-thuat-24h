@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   phoneRaw,
   zaloUrl: `https://zalo.me/${phoneRaw}`,
   domain: "dichvukythuat24h.vn",
-  baseUrl: "https://dichvukythuat24h.vn",
+  baseUrl: "https://www.dichvukythuat24h.vn",
   primaryAddress: "Tầng 2, D12 Giảng Võ, Ba Đình, Hà Nội",
   branches: [
     "Tầng 2, D12 Giảng Võ, Ba Đình, Hà Nội",
