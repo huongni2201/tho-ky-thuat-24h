@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { SERVICES } from "@/data/siteData";
 import { REPAIR_SERVICES } from "@/data/repairServices";
 
 export default function ServicesDropdown({
@@ -33,6 +32,8 @@ export default function ServicesDropdown({
     <details
       ref={detailsRef}
       className={mobile ? "group border-b border-slate-100" : "group relative"}
+      onMouseEnter={() => { if (!mobile && window.matchMedia("(hover: hover)").matches && detailsRef.current) detailsRef.current.open = true; }}
+      onMouseLeave={() => { if (!mobile && window.matchMedia("(hover: hover)").matches && detailsRef.current) detailsRef.current.open = false; }}
       onKeyDown={(event) => {
         if (event.key === "Escape" && detailsRef.current?.open) {
           event.stopPropagation();
@@ -52,36 +53,17 @@ export default function ServicesDropdown({
           <path d="m5 7.5 5 5 5-5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </summary>
-      <div className={mobile ? "pb-3" : "absolute left-1/2 top-full z-10 max-h-[65dvh] w-[min(44rem,calc(100vw-2rem))] -translate-x-1/2 overflow-y-auto rounded-lg border border-slate-200 bg-white p-4 shadow-lg"}>
-        <Link href="/dich-vu" onClick={close} className="flex min-h-11 items-center rounded px-3 text-sm font-bold text-sky-900 hover:bg-sky-50">
-          Xem tất cả dịch vụ →
-        </Link>
-        <div className={mobile ? "space-y-3" : "grid grid-cols-2 gap-4 border-t border-slate-100 pt-3"}>
-          <div>
-            <p className="px-3 py-2 text-xs font-bold uppercase tracking-wide text-slate-500">Khoan lắp tại nhà</p>
-            <ul>
-              {SERVICES.map((service) => (
-                <li key={service.id}>
-                  <Link href={service.slug ? `/${service.slug}` : `/dich-vu#${service.id}`} onClick={close} className="flex min-h-11 items-center whitespace-normal rounded px-3 py-2 text-sm font-medium leading-relaxed text-slate-700 hover:bg-sky-50 hover:text-sky-900">
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="px-3 py-2 text-xs font-bold uppercase tracking-wide text-slate-500">Sửa chữa điện nước</p>
-            <ul>
-              {REPAIR_SERVICES.map((service) => (
-                <li key={service.id}>
-                  <Link href={`/dich-vu#${service.id}`} onClick={close} className="flex min-h-11 items-center whitespace-normal rounded px-3 py-2 text-sm font-medium leading-relaxed text-slate-700 hover:bg-sky-50 hover:text-sky-900">
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className={mobile ? "pb-3" : "absolute left-1/2 top-full z-10 max-h-[65dvh] w-[min(22rem,calc(100vw-2rem))] -translate-x-1/2 overflow-y-auto rounded-lg border border-slate-200 bg-white p-3 shadow-lg"}>
+        <p className="px-3 py-2 text-xs font-bold uppercase tracking-wide text-slate-500">Sửa chữa điện nước</p>
+        <ul>
+          {REPAIR_SERVICES.map((service) => (
+            <li key={service.id}>
+              <Link href={`/dich-vu#${service.id}`} onClick={close} className="flex min-h-11 items-center whitespace-normal rounded px-3 py-2 text-sm font-medium leading-relaxed text-slate-700 hover:bg-sky-50 hover:text-sky-900">
+                {service.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </details>
   );

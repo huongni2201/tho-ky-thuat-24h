@@ -1,15 +1,15 @@
 import { SITE_CONFIG } from "@/data/siteData";
 
-export default function FinalCtaSection() {
+export default function FinalCtaSection({ repair = false }: { repair?: boolean }) {
   return (
     <section id="lien-he" className="py-16 md:py-20 bg-slate-900 text-white border-t border-slate-800 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-          Cần Thợ Khoan Tường Tại Hà Nội?
+          {repair ? "Cần Thợ Sửa Điện Nước Tại Hà Nội?" : "Cần Thợ Khoan Tường Tại Hà Nội?"}
         </h2>
 
         <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Đừng tự đục phá hỏng tường hay mất thời gian quý báu. DỊCH VỤ KỸ THUẬT 24H luôn sẵn sàng mang máy móc chuyên dụng tới giúp bạn hoàn thiện không gian sống đẹp & kiên cố nhất!
+          {repair ? "Gọi hoặc nhắn Zalo để trao đổi về sự cố điện nước và nhận tư vấn phương án xử lý." : "Đừng tự đục phá hỏng tường hay mất thời gian quý báu. DỊCH VỤ KỸ THUẬT 24H luôn sẵn sàng mang máy móc chuyên dụng tới giúp bạn hoàn thiện không gian sống đẹp & kiên cố nhất!"}
         </p>
 
         {/* Dual Conversion Buttons: Phone & Zalo */}

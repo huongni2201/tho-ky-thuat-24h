@@ -1,6 +1,6 @@
 import { ServiceItem, ProjectItem, FaqItem, DistrictCoverage, TrustPoint, ProcessStep } from "@/types";
 
-const phoneDisplay = "056.272.8888";
+const phoneDisplay = "0866.084.094";
 const phoneRaw = phoneDisplay.replace(/\D/g, "");
 
 export const SITE_CONFIG = {

@@ -7,9 +7,9 @@ import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import { REPAIR_SERVICES } from "@/data/repairServices";
 
 export const metadata: Metadata = {
-  title: "Dịch Vụ Khoan Lắp & Sửa Điện Nước Tại Hà Nội",
+  title: "Dịch Vụ Sửa Điện Nước Tại Hà Nội",
   description:
-    "Dịch vụ khoan tường, treo Tivi, lắp giá kệ, sửa điện nước, chậu rửa bát và vòi nước tại Hà Nội. Xem hạng mục theo khu vực và liên hệ tư vấn.",
+    "Dịch vụ sửa điện nước, chậu rửa bát và vòi nước tại Hà Nội. Xem hạng mục theo khu vực và liên hệ tư vấn.",
   alternates: {
     canonical: "/dich-vu",
   },
@@ -34,51 +34,12 @@ export default function ServicesPage() {
             </nav>
 
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Dịch Vụ Khoan Lắp & Sửa Điện Nước Tại Nhà
+              Dịch Vụ Sửa Điện Nước Tại Nhà
             </h1>
 
             <p className="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              Các hạng mục khoan tường, treo lắp đồ dùng gia đình và sửa chữa điện nước tại Hà Nội. Chọn dịch vụ bên dưới để xem nội dung và liên hệ tư vấn.
+              Các hạng mục sửa chữa điện nước tại Hà Nội. Chọn dịch vụ bên dưới để xem nội dung và liên hệ tư vấn.
             </p>
-          </div>
-
-          {/* Quick Sub-service Navigation Links */}
-          <div className="bg-white border border-slate-200/90 rounded-xl p-5 space-y-3">
-            <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
-              Chuyển nhanh tới dịch vụ chuyên biệt:
-            </h2>
-            <div className="flex flex-wrap gap-2 text-xs">
-              <Link
-                href="/khoan-tuong-treo-tranh"
-                className="bg-slate-50 hover:bg-sky-50 text-slate-800 hover:text-sky-900 border border-slate-200 font-semibold px-3 py-1.5 rounded-lg transition-colors"
-              >
-                Khoan Tường Treo Tranh
-              </Link>
-              <Link
-                href="/treo-tv-tuong"
-                className="bg-slate-50 hover:bg-sky-50 text-slate-800 hover:text-sky-900 border border-slate-200 font-semibold px-3 py-1.5 rounded-lg transition-colors"
-              >
-                Treo Tivi Tường
-              </Link>
-              <Link
-                href="/lap-gia-ke"
-                className="bg-slate-50 hover:bg-sky-50 text-slate-800 hover:text-sky-900 border border-slate-200 font-semibold px-3 py-1.5 rounded-lg transition-colors"
-              >
-                Lắp Giá Kệ & Ban Thờ
-              </Link>
-              <Link
-                href="/treo-guong"
-                className="bg-slate-50 hover:bg-sky-50 text-slate-800 hover:text-sky-900 border border-slate-200 font-semibold px-3 py-1.5 rounded-lg transition-colors"
-              >
-                Treo Gương Trang Trí
-              </Link>
-              <Link
-                href="/lap-rem-cua"
-                className="bg-slate-50 hover:bg-sky-50 text-slate-800 hover:text-sky-900 border border-slate-200 font-semibold px-3 py-1.5 rounded-lg transition-colors"
-              >
-                Treo Rèm Cửa & Giàn Phơi
-              </Link>
-            </div>
           </div>
 
           <nav aria-label="Dịch vụ sửa chữa điện nước" className="bg-white border border-slate-200/90 rounded-xl p-5">
@@ -98,7 +59,7 @@ export default function ServicesPage() {
           <ServicesSection />
 
           {/* Final Callout */}
-          <FinalCtaSection />
+          <FinalCtaSection repair />
 
         </div>
       </main>
