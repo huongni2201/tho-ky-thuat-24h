@@ -1,13 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/data/siteData";
 import TechnicianIcon from "@/components/ui/TechnicianIcon";
+import ServicesDropdown from "@/components/layout/ServicesDropdown";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +20,15 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full font-sans sticky top-0 z-50 transition-all duration-300">
+    <header
+      className="w-full font-sans sticky top-0 z-50 transition-all duration-300"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isMobileMenuOpen) {
+          setIsMobileMenuOpen(false);
+          mobileMenuButtonRef.current?.focus();
+        }
+      }}
+    >
       {/* 1. Small Utility Topbar */}
       <div className="bg-slate-900 text-slate-200 text-xs py-2 border-b border-slate-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-1.5">
@@ -77,7 +87,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-black text-lg sm:text-xl text-slate-900 tracking-tight leading-tight group-hover:text-sky-900 transition-colors flex items-center gap-1.5">
-                THỢ KỸ THUẬT <span className="text-sky-700 font-black">24H</span>
+                DỊCH VỤ KỸ THUẬT <span className="text-sky-700 font-black">24H</span>
               </span>
               <span className="text-[10px] sm:text-[11px] text-slate-500 font-semibold tracking-wider uppercase">
                 Khoan Tường • Treo Tranh, TV
@@ -85,43 +95,22 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation - Clean single-line links */}
-          <nav className="hidden xl:flex items-center gap-6 lg:gap-7 font-semibold text-sm text-slate-700 whitespace-nowrap">
+          {/* Desktop Navigation */}
+          <nav aria-label="Điều hướng chính" className="hidden lg:flex items-center gap-4 xl:gap-6 font-semibold text-sm text-slate-700 whitespace-nowrap">
             <Link href="/" className="hover:text-sky-800 transition-colors py-1">
               Trang Chủ
             </Link>
-            <Link href="/gioi-thieu" className="hover:text-sky-800 transition-colors py-1">
+            <Link href="/gioi-thieu" className="hidden xl:block hover:text-sky-800 transition-colors py-1">
               Giới Thiệu
             </Link>
-            <Link href="/dich-vu" className="hover:text-sky-800 transition-colors py-1">
-              Dịch Vụ
-            </Link>
+            <ServicesDropdown />
             <Link href="/bang-gia" className="hover:text-sky-800 transition-colors py-1">
               Bảng Giá
             </Link>
-            <Link href="/khu-vuc-phuc-vu" className="hover:text-sky-800 transition-colors py-1">
+            <Link href="/khu-vuc-phuc-vu" className="hidden xl:block hover:text-sky-800 transition-colors py-1">
               Khu Vực Phục Vụ
             </Link>
             <Link href="/lien-he" className="hover:text-sky-800 transition-colors py-1">
-              Liên Hệ
-            </Link>
-          </nav>
-
-          {/* Medium screen navigation fallback (lg screens) */}
-          <nav className="hidden lg:flex xl:hidden items-center gap-4 font-semibold text-xs sm:text-sm text-slate-700 whitespace-nowrap">
-            <Link href="/" className="hover:text-sky-800">
-              Trang Chủ
-            </Link>
-            <Link href="/dich-vu" className="hover:text-sky-800">
-              Dịch Vụ
-            </Link>
-            <Link href="/gioi-thieu" className="hover:text-sky-800">
-              Giới Thiệu
-            </Link>
-            <Link href="/bang-gia" className="hover:text-sky-800">
-              Bảng Giá
-            </Link>
-            <Link href="/lien-he" className="hover:text-sky-800">
               Liên Hệ
             </Link>
           </nav>
@@ -141,9 +130,10 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
+            ref={mobileMenuButtonRef}
             type="button"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className="lg:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-none"
+            className="lg:hidden min-h-11 min-w-11 p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100"
             aria-label="Menu"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-nav"
@@ -162,7 +152,7 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen ? (
-          <div id="mobile-nav" className="lg:hidden border-t border-slate-200/90 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
+          <nav id="mobile-nav" aria-label="Điều hướng trên điện thoại" className="lg:hidden max-h-[calc(100dvh-9rem)] overflow-y-auto border-t border-slate-200/90 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
             <Link
               href="/"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -170,13 +160,7 @@ export default function Header() {
             >
               Trang Chủ
             </Link>
-            <Link
-              href="/dich-vu"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block font-semibold text-slate-800 text-base py-1.5 border-b border-slate-100"
-            >
-              Dịch Vụ Khoan Lắp
-            </Link>
+            <ServicesDropdown mobile onNavigate={() => setIsMobileMenuOpen(false)} />
             <Link
               href="/gioi-thieu"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -217,7 +201,7 @@ export default function Header() {
                 <span>GỌI THỢ NGAY: {SITE_CONFIG.phoneDisplay}</span>
               </a>
             </div>
-          </div>
+          </nav>
         ) : null}
       </div>
     </header>

@@ -18,7 +18,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-xl text-white tracking-tight">
-                  THỢ KỸ THUẬT <span className="text-sky-400">24H</span>
+                  DỊCH VỤ KỸ THUẬT <span className="text-sky-400">24H</span>
                 </span>
                 <span className="text-[11px] text-slate-400 uppercase tracking-wide">
                   Dịch Vụ Khoan Treo Tại Nhà Hà Nội
@@ -45,12 +45,18 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-400">
               {SERVICES.map((s) => (
                 <li key={s.id}>
-                  <Link href={`/${s.slug}`} className="hover:text-sky-400 transition-colors flex items-center gap-2">
+                  <Link href={s.slug ? `/${s.slug}` : `/dich-vu#${s.id}`} className="hover:text-sky-400 transition-colors flex items-center gap-2">
                     <span className="text-sky-500">›</span>
                     <span>{s.title}</span>
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/dich-vu#sua-chua-dien-nuoc" className="hover:text-sky-400 transition-colors flex items-center gap-2">
+                  <span className="text-sky-500">›</span>
+                  <span>Sửa chữa điện nước</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -92,7 +98,7 @@ export default function Footer() {
       {/* Sub Footer Copyright Bar */}
       <div className="bg-slate-900/80 border-t border-slate-800/80 pt-4 pb-[calc(9rem+env(safe-area-inset-bottom))] text-xs text-slate-400 sm:pb-[calc(10rem+env(safe-area-inset-bottom))]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-          <p>© 2026 {SITE_CONFIG.legalName}. Bản quyền thuộc về Thokythuat24h.com.</p>
+          <p>© 2026 {SITE_CONFIG.legalName}. Bản quyền thuộc về dichvukythuat24h.vn.</p>
           <div className="flex items-center gap-4 text-slate-400">
             <Link href="/gioi-thieu" className="hover:text-white transition-colors">Giới thiệu</Link>
             <span>•</span>

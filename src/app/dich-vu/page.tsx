@@ -4,11 +4,12 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ServicesSection from "@/components/sections/ServicesSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
+import { REPAIR_SERVICES } from "@/data/repairServices";
 
 export const metadata: Metadata = {
-  title: "Dịch Vụ Khoan Lắp Kỹ Thuật",
+  title: "Dịch Vụ Khoan Lắp & Sửa Điện Nước Tại Hà Nội",
   description:
-    "Tổng quan danh mục dịch vụ thợ khoan tường treo tranh, treo Tivi, lắp giá kệ, treo rèm cửa, treo gương soi chuyên nghiệp tại Hà Nội.",
+    "Dịch vụ khoan tường, treo Tivi, lắp giá kệ, sửa điện nước, chậu rửa bát và vòi nước tại Hà Nội. Xem hạng mục theo khu vực và liên hệ tư vấn.",
   alternates: {
     canonical: "/dich-vu",
   },
@@ -33,11 +34,11 @@ export default function ServicesPage() {
             </nav>
 
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Tổng Quan Dịch Vụ Khoan Lắp Kỹ Thuật Tại Nhà
+              Dịch Vụ Khoan Lắp & Sửa Điện Nước Tại Nhà
             </h1>
 
             <p className="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              Chi tiết các hạng mục thợ khoan tường, lắp đặt Tivi, kệ gỗ, gương decor và đồ dùng gia đình tại các quận Hà Nội.
+              Các hạng mục khoan tường, treo lắp đồ dùng gia đình và sửa chữa điện nước tại Hà Nội. Chọn dịch vụ bên dưới để xem nội dung và liên hệ tư vấn.
             </p>
           </div>
 
@@ -79,6 +80,19 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
+
+          <nav aria-label="Dịch vụ sửa chữa điện nước" className="bg-white border border-slate-200/90 rounded-xl p-5">
+            <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Sửa chữa điện nước theo nhu cầu & khu vực</h2>
+            <ul className="mt-3 grid gap-x-6 sm:grid-cols-2">
+              {REPAIR_SERVICES.map((service) => (
+                <li key={service.id}>
+                  <Link href={`#${service.id}`} className="flex min-h-11 items-center py-2 text-sm font-medium text-sky-800 hover:underline">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           {/* Main Services Section */}
           <ServicesSection />

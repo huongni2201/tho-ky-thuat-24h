@@ -14,8 +14,8 @@ const beVietnamPro = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   title: {
-    default: "Khoan Tường Treo Tranh - Treo Tivi Tại Hà Nội | Thợ Kỹ Thuật 24h",
-    template: "%s | Thợ Kỹ Thuật 24h",
+    default: "Khoan Tường Treo Tranh - Treo Tivi Tại Hà Nội | DỊCH VỤ KỸ THUẬT 24H",
+    template: "%s | DỊCH VỤ KỸ THUẬT 24H",
   },
   description:
     "Dịch vụ khoan tường, treo tranh, treo Tivi, lắp giá kệ, treo rèm cửa & đồ kỹ thuật tận nhà tại Hà Nội. Thợ lành nghề, có mặt nhanh 20-30 phút, báo giá trước, thi công sạch gọn.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "lắp giá kệ treo tường hà nội",
     "thợ khoan tường tại nhà hà nội",
     "treo gương rèm cửa hà nội",
-    "thợ kỹ thuật 24h",
+    "dịch vụ kỹ thuật 24h",
   ],
   metadataBase: new URL(SITE_CONFIG.baseUrl),
   alternates: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "/images/hero-technician.png",
         width: 1200,
         height: 630,
-        alt: "Thợ Kỹ Thuật 24h - Dịch vụ khoan tường treo tranh treo tivi Hà Nội",
+        alt: "DỊCH VỤ KỸ THUẬT 24H - Dịch vụ khoan tường treo tranh treo tivi Hà Nội",
       },
     ],
   },

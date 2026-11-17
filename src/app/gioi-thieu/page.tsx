@@ -8,7 +8,7 @@ import FinalCtaSection from "@/components/sections/FinalCtaSection";
 export const metadata: Metadata = {
   title: "Giới Thiệu",
   description:
-    "Tìm hiểu về Thợ Kỹ Thuật 24h - Đơn vị chuyên dịch vụ thợ khoan tường, treo tranh, treo Tivi, lắp giá kệ tận nhà uy tín tại Hà Nội.",
+    "Tìm hiểu về DỊCH VỤ KỸ THUẬT 24H - Đơn vị chuyên dịch vụ thợ khoan tường, treo tranh, treo Tivi, lắp giá kệ tận nhà uy tín tại Hà Nội.",
   alternates: {
     canonical: "/gioi-thieu",
   },
@@ -33,7 +33,7 @@ export default function AboutPage() {
             </nav>
 
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Giới Thiệu Về Thợ Kỹ Thuật 24h
+              Giới Thiệu Về DỊCH VỤ KỸ THUẬT 24H
             </h1>
 
             <p className="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 Những việc nhỏ như khoan tường treo bộ tranh kỷ niệm, lắp Tivi phòng khách, treo tấm gương nhà tắm hay bắt thanh rèm cửa tuy đơn giản nhưng lại đòi hỏi tay nghề chuẩn xác và máy móc chuyên dụng. Việc tự khoan đục khi không có kinh nghiệm rất dễ gây nứt gạch, đứt dây điện âm tường hoặc treo đồ lệch vị trí gây mất thẩm mỹ và nguy hiểm.
               </p>
               <p>
-                <strong>Thợ Kỹ Thuật 24h</strong> ra đời với mục tiêu mang đến cho các gia đình tại Hà Nội một dịch vụ thợ kỹ thuật tại nhà minh bạch, đúng hẹn và thi công chất lượng nhất.
+                <strong>DỊCH VỤ KỸ THUẬT 24H</strong> ra đời với mục tiêu mang đến cho các gia đình tại Hà Nội một dịch vụ thợ kỹ thuật tại nhà minh bạch, đúng hẹn và thi công chất lượng nhất.
               </p>
             </div>
 

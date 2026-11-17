@@ -4,13 +4,13 @@ const phoneDisplay = "056.272.8888";
 const phoneRaw = phoneDisplay.replace(/\D/g, "");
 
 export const SITE_CONFIG = {
-  name: "Thợ Kỹ Thuật 24h",
-  legalName: "Dịch Vụ Kỹ Thuật Tại Nhà Hà Nội - Thợ Kỹ Thuật 24h",
+  name: "DỊCH VỤ KỸ THUẬT 24H",
+  legalName: "DỊCH VỤ KỸ THUẬT 24H",
   phoneDisplay,
   phoneRaw,
   zaloUrl: `https://zalo.me/${phoneRaw}`,
-  domain: "thokythuat24h.com",
-  baseUrl: "https://thokythuat24h.com",
+  domain: "dichvukythuat24h.vn",
+  baseUrl: "https://dichvukythuat24h.vn",
   primaryAddress: "Tầng 2, D12 Giảng Võ, Ba Đình, Hà Nội",
   branches: [
     "Tầng 2, D12 Giảng Võ, Ba Đình, Hà Nội",
@@ -19,7 +19,7 @@ export const SITE_CONFIG = {
     "154 Nguyễn Trãi, Thanh Xuân, Hà Nội",
   ],
   workingHours: "7:00 - 22:00 (Cả Thứ 7, CN & Ngày lễ)",
-  email: "lienhe@thokythuat24h.com",
+  email: "dichvukythuat24h@gmail.com",
   serviceArea: "Toàn bộ 12 quận nội thành & các khu vực Hà Nội",
 };
 

@@ -12,14 +12,14 @@ import { SITE_CONFIG } from "@/data/siteData";
 export const metadata: Metadata = {
   title: "Liên hệ",
   description:
-    "Thông tin hotline, Zalo, giờ làm việc, khu vực phục vụ và danh sách cơ sở địa chỉ của Thợ Kỹ Thuật 24h tại Hà Nội.",
+    "Thông tin hotline, Zalo, giờ làm việc, khu vực phục vụ và danh sách cơ sở địa chỉ của DỊCH VỤ KỸ THUẬT 24H tại Hà Nội.",
   alternates: {
     canonical: "/lien-he",
   },
   openGraph: {
     title: "Liên hệ",
     description:
-      `Thông tin hotline ${SITE_CONFIG.phoneDisplay}, nhắn Zalo tư vấn, giờ làm việc và danh sách cơ sở của Thợ Kỹ Thuật 24h tại Hà Nội.`,
+      `Thông tin hotline ${SITE_CONFIG.phoneDisplay}, nhắn Zalo tư vấn, giờ làm việc và danh sách cơ sở của DỊCH VỤ KỸ THUẬT 24H tại Hà Nội.`,
     url: `${SITE_CONFIG.baseUrl}/lien-he`,
     siteName: SITE_CONFIG.name,
     locale: "vi_VN",
@@ -51,7 +51,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="text-slate-600 text-xs sm:text-sm max-w-xl leading-relaxed">
-              Thông tin hotline, nhắn Zalo, giờ làm việc, danh sách cơ sở và địa bàn phục vụ của Thợ Kỹ Thuật 24h tại Hà Nội.
+              Thông tin hotline, nhắn Zalo, giờ làm việc, danh sách cơ sở và địa bàn phục vụ của DỊCH VỤ KỸ THUẬT 24H tại Hà Nội.
             </p>
           </div>
 

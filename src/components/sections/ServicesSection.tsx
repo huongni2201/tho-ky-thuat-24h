@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES, SITE_CONFIG } from "@/data/siteData";
+import { REPAIR_SERVICES } from "@/data/repairServices";
 
 export default function ServicesSection() {
   return (
@@ -22,7 +23,8 @@ export default function ServicesSection() {
           {SERVICES.map((service) => (
             <article
               key={service.id}
-              className="overflow-hidden bg-white rounded-xl border border-slate-200/90 flex flex-col hover:border-sky-300 focus-within:border-sky-300 transition-colors group shadow-sm"
+              id={service.id}
+              className="scroll-mt-44 overflow-hidden bg-white rounded-xl border border-slate-200/90 flex flex-col hover:border-sky-300 focus-within:border-sky-300 transition-colors group shadow-sm"
             >
               <div className="relative">
                 <Image
@@ -32,7 +34,7 @@ export default function ServicesSection() {
                   height={540}
                   className="block w-full h-auto bg-slate-100"
                 />
-                <span aria-hidden="true" className="pointer-events-none absolute right-3 bottom-3 rounded bg-slate-950/35 px-2 py-1 text-sm font-semibold tracking-wide text-white/80 sm:text-base">
+                <span aria-hidden="true" className="pointer-events-none absolute right-3 bottom-3 text-sm font-semibold tracking-wide text-white sm:text-base">
                   {SITE_CONFIG.phoneDisplay}
                 </span>
               </div>
@@ -90,6 +92,26 @@ export default function ServicesSection() {
             </article>
           ))}
         </div>
+
+        <section id="sua-chua-dien-nuoc" aria-labelledby="repair-services-heading" className="mt-12 scroll-mt-44 border-t border-slate-200 pt-8">
+          <h2 id="repair-services-heading" className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Dịch vụ sửa chữa điện nước tại Hà Nội
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600">
+            Sửa điện nước sinh hoạt, chậu rửa bát và vòi nước tại nhà. Chọn hạng mục theo nhu cầu và khu vực, gọi hoặc gửi hình ảnh qua Zalo để trao đổi tình trạng cần sửa.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-x-8 md:grid-cols-2">
+            {REPAIR_SERVICES.map((service) => (
+              <article key={service.id} id={service.id} className="scroll-mt-44 border-b border-slate-200 py-5">
+                <h3 className="text-lg font-bold text-slate-900">{service.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
+                <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="mt-2 inline-flex min-h-11 items-center text-sm font-bold text-sky-800 hover:underline" aria-label={`Gọi tư vấn: ${service.title}`}>
+                  Gọi tư vấn: {SITE_CONFIG.phoneDisplay}
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {/* Quick Call Out Banner inside Services */}
         <div className="mt-8 sm:mt-10 bg-slate-900 border border-slate-800 rounded-xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6">

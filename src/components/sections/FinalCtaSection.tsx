@@ -9,7 +9,7 @@ export default function FinalCtaSection() {
         </h2>
 
         <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Đừng tự đục phá hỏng tường hay mất thời gian quý báu. Thợ Kỹ Thuật 24h luôn sẵn sàng mang máy móc chuyên dụng tới giúp bạn hoàn thiện không gian sống đẹp & kiên cố nhất!
+          Đừng tự đục phá hỏng tường hay mất thời gian quý báu. DỊCH VỤ KỸ THUẬT 24H luôn sẵn sàng mang máy móc chuyên dụng tới giúp bạn hoàn thiện không gian sống đẹp & kiên cố nhất!
         </p>
 
         {/* Dual Conversion Buttons: Phone & Zalo */}

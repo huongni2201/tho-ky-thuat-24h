@@ -29,7 +29,7 @@ export default function HeroSection() {
 
             {/* Supporting Paragraph */}
             <p className="text-slate-200 text-sm sm:text-base max-w-2xl font-normal leading-relaxed">
-              Bạn cần khoan tường treo tranh decor, treo Tivi màn hình lớn, lắp kệ sách, rèm cửa hay đồ dùng gia đình? Thợ Kỹ Thuật 24h có mặt sau <strong className="text-white font-semibold">20–30 phút</strong> tại tất cả các quận Hà Nội, đo đạc laser chuẩn xác, máy khoan chuyên dụng dọn sạch bụi.
+              Bạn cần khoan tường treo tranh decor, treo Tivi màn hình lớn, lắp kệ sách, rèm cửa hay đồ dùng gia đình? DỊCH VỤ KỸ THUẬT 24H có mặt sau <strong className="text-white font-semibold">20–30 phút</strong> tại tất cả các quận Hà Nội, đo đạc laser chuẩn xác, máy khoan chuyên dụng dọn sạch bụi.
             </p>
 
             {/* CTAs */}

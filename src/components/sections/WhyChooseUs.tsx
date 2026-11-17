@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
           {/* Left Column: Focused Value Proposition & Action */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Tại Sao Khách Hàng Hà Nội Tin Chọn Thợ Kỹ Thuật 24h?
+              Tại Sao Khách Hàng Hà Nội Tin Chọn DỊCH VỤ KỸ THUẬT 24H?
             </h2>
             
             <p className="text-slate-600 text-base leading-relaxed">

@@ -10,7 +10,7 @@ export default function ShortAboutSection() {
           {/* Left Text */}
           <div className="lg:col-span-8 space-y-3.5">
             <span className="text-sky-900 font-bold text-xs uppercase tracking-wider bg-sky-100/80 border border-sky-200 px-2.5 py-0.5 rounded-md inline-block">
-              GIỚI THIỆU THỢ KỸ THUẬT 24H
+              GIỚI THIỆU DỊCH VỤ KỸ THUẬT 24H
             </span>
 
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -18,7 +18,7 @@ export default function ShortAboutSection() {
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              <strong>Thợ Kỹ Thuật 24h</strong> chuyên cung cấp dịch vụ khoan treo tranh, lắp Tivi màn hình lớn, kệ gỗ trang trí, gương soi, rèm cửa và thiết bị gia đình tại tất cả 12 quận nội thành Hà Nội. Đội ngũ thợ kinh nghiệm, trang bị thước nivo laser chuẩn xác và máy hút dọn bụi sạch sẽ trước khi bàn giao.
+              <strong>DỊCH VỤ KỸ THUẬT 24H</strong> chuyên cung cấp dịch vụ khoan treo tranh, lắp Tivi màn hình lớn, kệ gỗ trang trí, gương soi, rèm cửa và thiết bị gia đình tại tất cả 12 quận nội thành Hà Nội. Đội ngũ thợ kinh nghiệm, trang bị thước nivo laser chuẩn xác và máy hút dọn bụi sạch sẽ trước khi bàn giao.
             </p>
 
             <div className="pt-1 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">

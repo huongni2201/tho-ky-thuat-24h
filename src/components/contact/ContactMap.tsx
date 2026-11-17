@@ -15,7 +15,7 @@ export default function ContactMap() {
 
       <div className="w-full aspect-[16/7] min-h-[240px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
         <iframe
-          title="Bản đồ vị trí dịch vụ Thợ Kỹ Thuật 24h tại Hà Nội"
+          title="Bản đồ vị trí dịch vụ DỊCH VỤ KỸ THUẬT 24H tại Hà Nội"
           src={mapEmbedSrc}
           width="100%"
           height="100%"
