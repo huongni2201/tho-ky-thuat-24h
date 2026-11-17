@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
+import InstallationServicesSection from "@/components/sections/InstallationServicesSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ShortAboutSection from "@/components/sections/ShortAboutSection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -22,6 +23,7 @@ export default function Home() {
         <HeroSection />
 
         {/* 2. Core Services Cards */}
+        <InstallationServicesSection />
         <ServicesSection />
 
         {/* 3. Short About Section */}

@@ -12,7 +12,7 @@ export default function ServicesSection() {
           <div className="mt-7 grid grid-cols-1 gap-5 md:grid-cols-2">
             {REPAIR_SERVICES.map((service) => (
               <article key={service.id} id={service.id} className="scroll-mt-44 overflow-hidden rounded-lg border border-slate-200 bg-white sm:flex">
-                <Image src={service.id.includes("chau") || service.id.includes("voi") ? "/images/repair-faucet.gif" : "/images/repair-tools.png"} alt="" width={300} height={243} className="h-40 w-full object-contain bg-slate-100 sm:h-auto sm:w-36 sm:shrink-0" />
+                <Image src={service.image} alt="" width={300} height={243} className="h-40 w-full object-cover bg-slate-100 sm:h-auto sm:w-36 sm:shrink-0" />
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-slate-900">{service.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
